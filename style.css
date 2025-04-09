@@ -1,0 +1,114 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+body {
+    background: linear-gradient(to right, #ffb6c1, #ffe4e1);
+    text-align: center;
+    padding: 40px;
+    color: #333;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.heart {
+    font-size: 2em;
+    color: red;
+    animation: beat 1s infinite alternate;
+}
+
+@keyframes beat {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.arrow {
+    margin-top: 30px;
+    transform: rotate(180deg);
+    outline: dashed 1px red;
+    animation: down 2s infinite alternate;
+}
+
+@keyframes down {
+    from {
+        transform: translateY(0) rotate(180deg);
+    }
+
+    to {
+        transform: translateY(20px) rotate(180deg);
+    }
+}
+
+.arrow img {
+    height: 40px;
+}
+
+.img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.imgEdit {
+    object-position: 0px 0px;
+}
+
+.imgEdit2 {
+    object-position: 0px -200px; 
+}
+
+
+.button {
+    padding: 10px 20px;
+    background-color: #ffb6c1;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button:hover {
+    background-color: #e9a8b2;
+}
+
+.button:active {
+    background-color: #f88f9d;
+}
+
+.content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 100vh;;
+}
