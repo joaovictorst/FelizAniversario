@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quem ama mais?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffeef2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 50px;
+      color: #ff4d6d;
+    }
+
+    .buttons {
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      position: absolute;
+    }
+
+    #btnEle {
+      left: 30%;
+      top: 120px;
+      background-color: #4caf50;
+      color: white;
+    }
+
+    #btnEla {
+      background-color: #e91e63;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quem ama mais?</h1>
+  <div class="buttons">
+    <button id="btnEle">Ele</button>
+    <button id="btnEla">Ela</button>
+  </div>
+
+  <script>
+    const btnEla = document.getElementById('btnEla');
+    const container = document.querySelector('.buttons');
+
+    function moveButton() {
+      const maxX = container.clientWidth - btnEla.offsetWidth;
+      const maxY = container.clientHeight - btnEla.offsetHeight;
+
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+
+      btnEla.style.left = `${randomX}px`;
+      btnEla.style.top = `${randomY}px`;
+    }
+
+    // Coloca posição inicial
+    moveButton();
+
+    // Muda de posição quando passa o mouse
+    btnEla.addEventListener('mouseenter', moveButton);
+  </script>
+</body>
+</html>

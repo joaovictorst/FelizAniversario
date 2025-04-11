@@ -112,3 +112,28 @@ p {
 main {
     height: 100vh;;
 }
+
+.buttons {
+    position: relative;
+    min-width: 400px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+#btnEle {
+    left: 20%;
+    top: 80px;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+#btnEla {
+    left: 60%;
+    top: 80px;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.song {
+    margin-top: 20px;
+}
